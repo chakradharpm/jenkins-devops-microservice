@@ -15,5 +15,5 @@ node {
 	echo "Build"
 	echo "Tests"
 	echo "Integration Tests"
-	echo "Build Package"
+	//echo "Build Package"
 }
