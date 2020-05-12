@@ -35,7 +35,12 @@ pipeline{
         }
         stage('Integration Tests'){\
             steps{
-                echo "Package the tests"
+                echo "Integration Test running"
+            }
+        }
+        stage('Package the jar'){
+            steps{
+                echo "Package the jar running"
             }
         }
     }
