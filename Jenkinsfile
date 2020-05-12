@@ -1,5 +1,6 @@
-node {
-	/* stage('Build') {
+//SCRIPTED PIPELINE
+/* node {
+	 *//* stage('Build') {
 		echo "Build"
 	}
 	stage('Test') {
@@ -10,10 +11,33 @@ node {
 	}
 	stage('Package'){
 	    echo"Package"
-	} */
+	} *//*
 
 	echo "Build"
 	echo "Tests"
 	echo "Integration Tests"
 	//echo "Build Package"
+} */
+// Declarative PIPELINE
+
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo "Build"
+            }
+        }
+        stage('Test 1'){
+            steps{
+                echo "Test 1 Running"
+            }
+        }
+        stage('Integration Tests'){\
+            steps{
+                echo "Package the tests"
+            }
+        }
+    }
+
 }
