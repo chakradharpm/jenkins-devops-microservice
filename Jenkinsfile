@@ -44,5 +44,16 @@ pipeline{
             }
         }
     }
+    post{
+        always {
+            echo "I am running always"
+        }
+        success {
+            echo "I am successfully completed the build"
+        }
+        failure {
+            echo "Build Failed for some reason"
+        }
+    }
 
 }
